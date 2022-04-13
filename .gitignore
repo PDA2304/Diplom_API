@@ -1,0 +1,84 @@
+Skip to content
+Search or jump to…
+Pulls
+Issues
+Marketplace
+Explore
+ 
+@PDA2304 
+PDA2304
+/
+PrimetechPassManager
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+More
+PrimetechPassManager/.gitignore
+@PDA2304
+PDA2304 Был немного изменен docker-compose исправлено логирование nginx
+Latest commit 38d8225 on 23 Dec 2021
+ History
+ 1 contributor
+43 lines (37 sloc)  566 Bytes
+  
+/pg
+access.log
+error.log
+
+node_modules
+public/hot
+public/storage
+storage/*.key
+vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.idea
+.vscode
+
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+storage/*.key
+.env
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
