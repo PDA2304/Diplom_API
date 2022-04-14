@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 
-class SingInRequest extends FormRequest
+class SingInRequest extends ApiRequest
 {
     
     public function rules()
