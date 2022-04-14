@@ -20,7 +20,10 @@ return new class extends Migration
             $table->string('password');
             $table->string('logic_delete')->default(false);
             $table->string('description',255)->nullable();
+            $table->integer('user_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
