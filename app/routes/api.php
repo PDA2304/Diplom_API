@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NotesController;
+use App\Http\Controllers\ShareController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -42,4 +43,9 @@ Route::delete('/notes/{id}',[NotesController::class, 'destroy']);
 
 #region Аккаунты
 
+#endregion
+
+#region Поделиться
+Route::post("/share/add/notes",[ShareController::class,'shareAddNotes']);
+Route::delete('/share/remove/notes',[ShareController::class,'shareRemoveNotes']);
 #endregion

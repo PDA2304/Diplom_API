@@ -82,3 +82,7 @@ Training
 Blog
 About
 Loading complete
+app/.composer/cache
+app/.bash_history
+nginx/logs/access.log
+nginx/logs/error.log
