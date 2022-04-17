@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('account_name', 30);
             $table->string('login');
             $table->string('password');
-            $table->string('logic_delete')->default(false);
+            $table->boolean('logic_delete')->default(false);
             $table->string('description',255)->nullable();
             $table->integer('user_id');
             $table->timestamps();

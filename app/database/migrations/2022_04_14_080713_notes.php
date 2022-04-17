@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('notes_name', 30);
             $table->string('content');
-            $table->string('logic_delete')->default(false);
+            $table->boolean('logic_delete')->default(false);
             $table->string('description',255)->nullable();
             $table->integer('user_id');
             $table->timestamps();
