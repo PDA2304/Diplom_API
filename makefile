@@ -51,11 +51,11 @@ artisan_list_route:
 
 # Останавлеивает docker
 docker_stop:
-	docker-compose -f "docker-compose.yml" -p "primetechpassmanager" stop
+	docker-compose -f "docker-compose.yml" stop
 
 # Запускает докер в фоновом режиме
 docker_start_demon:
-	docker-compose -f "docker-compose.yml" -p "primetechpassmanager" start
+	docker-compose -f "docker-compose.yml" start
 
 # Собирает docker и запускает в фоновом режиме 
 docker_build_start_demon:
