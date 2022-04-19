@@ -53,5 +53,7 @@ Route::delete('/account/{id}',[AccountContoller::class, 'destroy']);
 
 #region Поделиться
 Route::post("/share/add/notes",[ShareController::class,'shareAddNotes']);
+Route::post("/share/add/account",[ShareController::class,'shareAddAccount']);
 Route::delete('/share/remove/notes',[ShareController::class,'shareRemoveNotes']);
+Route::delete('/share/remove/account',[ShareController::class,'shareRemoveAccount']);
 #endregion
