@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountContoller;
 use App\Http\Controllers\NotesController;
 use App\Http\Controllers\ShareController;
 use App\Http\Controllers\UserController;
@@ -42,7 +43,12 @@ Route::delete('/notes/{id}',[NotesController::class, 'destroy']);
 #endregion
 
 #region Аккаунты
-
+Route::post('/account',[AccountContoller::class,'create']);
+Route::get('/account/{id}',[AccountContoller::class,'show']);
+Route::get('/account/user/{userId}',[AccountContoller::class, 'indexUser']);
+Route::put('/account',[AccountContoller::class,'update']);
+Route::delete('/account/logicDelete/{id}',[AccountContoller::class, 'logicDeleteAccount']);
+Route::delete('/account/{id}',[AccountContoller::class, 'destroy']);
 #endregion
 
 #region Поделиться
