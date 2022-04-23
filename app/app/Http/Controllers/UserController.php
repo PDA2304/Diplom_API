@@ -35,7 +35,7 @@ class UserController extends Controller
         return response()->json($result, 200);
     }
 
-    public function confirmation(Request $request)
+    public function confirmation(SingUpRequest $request)
     {
         $mail_data = ["number" => random_int(10000, 99999)];
 

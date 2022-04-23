@@ -11,7 +11,7 @@ class SingUpRequest extends ApiRequest
     {
         return [
             'user_name' => ["required", "min:3", "max:30"],
-            'login' => ["required", "email:rfc,dns", function ($attribute, $value, $fail) {
+            'login' => ["required", "email:rfc", function ($attribute, $value, $fail) {
                 if (User::where('login', '=', $value)->first()) {
                     $fail('Taкая почта есть в системе');
                 }
