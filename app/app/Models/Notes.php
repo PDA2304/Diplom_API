@@ -16,12 +16,12 @@ class Notes extends Model
         'content',
         'logic_delete',
         'description',
+        'created_at',
         'user_id'
     ];
 
 
     protected $hidden = [
-        'created_at',
         'updated_at',
     ];
 }

@@ -53,6 +53,7 @@ class NotesController extends Controller
         $result = NotesIndexResource::collection(
             ShareNotes::join('share_data', 'share_notes.share_id', '=', 'share_data.id')
                 ->join('notes', 'share_notes.notes_id', '=', 'notes.id')
+                ->orderBy('notes.created_at','DESC')
                 ->where('logic_delete', '=', 0)
                 ->get()
                 ->where('user_receiver_id', '=', $userId)

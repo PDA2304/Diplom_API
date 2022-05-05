@@ -13,12 +13,12 @@ class ShareNotes extends Model
 
     protected $fillable = [
         'notes_id',
-        'share_id'
+        'share_id',
+        'created_at'
     ];
 
 
     protected $hidden = [
-        'created_at',
         'updated_at',
     ];
 }
