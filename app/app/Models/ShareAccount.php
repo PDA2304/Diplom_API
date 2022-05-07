@@ -13,12 +13,12 @@ class ShareAccount extends Model
 
     protected $fillable = [
         'account_id',
-        'share_id'
+        'share_id',
+        'created_at',
     ];
 
 
     protected $hidden = [
-        'created_at',
         'updated_at',
     ];
 }
