@@ -17,11 +17,11 @@ class Account extends Model
         'password',
         'description',
         'logic_delete',
+        'created_at',
         'user_id'
     ];
 
     protected $hidden = [
-        'created_at',
         'updated_at',
     ];
 }

@@ -61,6 +61,7 @@ class AccountContoller extends Controller
         $result = AccountIndexResource::collection(
             ShareAccount::join('share_data', 'share_account.share_id', '=', 'share_data.id')
                 ->join('account', 'share_account.account_id', '=', 'account.id')
+                ->orderBy('account.created_at','DESC')  
                 ->where('logic_delete', '=', 0)
                 ->get()
                 ->where('user_receiver_id', '=', $userId)
