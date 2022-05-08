@@ -19,7 +19,7 @@ class DataResource extends JsonResource
             'creator' => $this->user_sender_id == $this->user_receiver_id ? true : false,
             'name' => $this->notes_name ?? $this->account_name ?? $this->files_name,
             'created_at' => $this->created_at,
-            'type_table' => $this->notes_id != null ? 'notes' : ($this->account_id != null ? 'account' : ($this->files_id != null ? 'files' : null))
+            'type_table' => $this->notes_id != null ? 0 : ($this->account_id != null ? 2 : ($this->files_id != null ? 1 : null))
         ];
     }
 }
