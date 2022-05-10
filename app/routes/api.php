@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccountContoller;
 use App\Http\Controllers\NotesController;
 use App\Http\Controllers\ShareController;
+use App\Http\Controllers\TrashController;
 use App\Http\Controllers\UserController;
 use App\Http\Resources\DataResource;
 use App\Models\ShareData;
@@ -60,6 +61,15 @@ Route::delete('/share/remove/notes', [ShareController::class, 'shareRemoveNotes'
 Route::delete('/share/remove/account', [ShareController::class, 'shareRemoveAccount']);
 #endregion
 
+#region корзина
+Route::get('/trash/{id}', [TrashController::class, 'indexUser']);
+Route::post('/trash', [TrashController::class, 'restoration']);
+Route::post('/trash/allUser/{id}', [TrashController::class, 'restorationallUser']);
+Route::delete('/trash/allUser/{id}', [TrashController::class, 'destroyAllUser']);
+Route::delete('/trash', [TrashController::class, 'destroy']);
+#endregion
+
+#region Вывод всех данных
 Route::get('/data/{id}', function ($id) {
     $result =
         DataResource::collection(
@@ -93,3 +103,4 @@ Route::get('/data/{id}', function ($id) {
 
     return response()->json($result, 200);
 });
+#endregion
