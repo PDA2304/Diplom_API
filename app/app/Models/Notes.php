@@ -24,4 +24,9 @@ class Notes extends Model
     protected $hidden = [
         'updated_at',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }

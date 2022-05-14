@@ -21,4 +21,15 @@ class ShareNotes extends Model
     protected $hidden = [
         'updated_at',
     ];
+
+    public function shareData()
+    {
+        return $this->belongsTo(ShareData::class, 'share_id', 'id');
+    }
+
+    public function notes()
+    {
+        return $this->belongsTo(Notes::class, 'notes_id', 'id');
+    }
+
 }

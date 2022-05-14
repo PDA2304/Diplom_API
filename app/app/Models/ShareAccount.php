@@ -21,4 +21,14 @@ class ShareAccount extends Model
     protected $hidden = [
         'updated_at',
     ];
+
+    public function shareData()
+    {
+        return $this->belongsTo(ShareData::class, 'share_id', 'id');
+    }
+
+    public function account()
+    {
+        return $this->belongsTo(Account::class, 'account_id', 'id');
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountContoller;
+use App\Http\Controllers\InformationController;
 use App\Http\Controllers\NotesController;
 use App\Http\Controllers\ShareController;
 use App\Http\Controllers\TrashController;
@@ -67,6 +68,12 @@ Route::post('/trash', [TrashController::class, 'restoration']);
 Route::post('/trash/allUser/{id}', [TrashController::class, 'restorationallUser']);
 Route::delete('/trash/allUser/{id}', [TrashController::class, 'destroyAllUser']);
 Route::delete('/trash', [TrashController::class, 'destroy']);
+#endregion
+
+#region Информация
+Route::get('/information/history_action', [InformationController::class, 'indexHistoryAction']);
+Route::get('/information/user_share', [InformationController::class, 'indexUserShare']);
+Route::get('/information/data_information', [InformationController::class, 'indexDataInformation']);
 #endregion
 
 #region Вывод всех данных
