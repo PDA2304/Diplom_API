@@ -20,7 +20,6 @@ return new class extends Migration
             $table->integer('data_id');
             $table->integer('type_table_id');
             $table->integer('type_action_id');
-            $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('type_action_id')->references('id')->on('type_actions')->onDelete('cascade')->onUpdate('cascade');

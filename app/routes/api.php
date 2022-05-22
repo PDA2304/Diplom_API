@@ -30,6 +30,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/sing_up', [UserController::class, 'sing_up']);
 Route::post('/sing_in', [UserController::class, 'sing_in']);
 Route::post('/confirmation', [UserController::class, 'confirmation']);
+Route::post('/confirmationNewLogin', [UserController::class, 'confirmationNewLogin']);
+Route::post('/newUserName',[UserController::class,'new_user_name']);
+Route::post('/newLogin',[UserController::class,'new_login']);
+Route::post('/newPassword',[UserController::class,'new_password']);
 #endregion
 
 #region Заметка
