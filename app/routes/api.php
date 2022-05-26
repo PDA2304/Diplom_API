@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountContoller;
+use App\Http\Controllers\FilesController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\NotesController;
 use App\Http\Controllers\ShareController;
@@ -26,19 +27,23 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/php', function () {
+    phpinfo();
+    return false;
+});
+
 #region Пользователь
 Route::post('/sing_up', [UserController::class, 'sing_up']);
 Route::post('/sing_in', [UserController::class, 'sing_in']);
 Route::post('/confirmation', [UserController::class, 'confirmation']);
 Route::post('/confirmationNewLogin', [UserController::class, 'confirmationNewLogin']);
-Route::post('/newUserName',[UserController::class,'new_user_name']);
-Route::post('/newLogin',[UserController::class,'new_login']);
-Route::post('/newPassword',[UserController::class,'new_password']);
+Route::post('/newUserName', [UserController::class, 'new_user_name']);
+Route::post('/newLogin', [UserController::class, 'new_login']);
+Route::post('/newPassword', [UserController::class, 'new_password']);
 #endregion
 
 #region Заметка
 Route::post('/notes', [NotesController::class, 'create']);
-Route::post('/notes/restoration/{id}', [NotesController::class, 'restorationNotes']);
 Route::get('/notes/user/{userId}', [NotesController::class, 'indexUser']);
 Route::get('/notes/{id}', [NotesController::class, 'show']);
 Route::put('/notes/{id}', [NotesController::class, 'update']);
@@ -47,7 +52,10 @@ Route::delete('/notes/{id}', [NotesController::class, 'destroy']);
 #endregion
 
 #region Файла
-
+Route::post('/files', [FilesController::class, 'create']);
+Route::get('/files/user/{userId}', [FilesController::class, 'indexUser']);
+Route::put('/files', [FilesController::class, 'update']);
+Route::delete('/files/logicDelete/{id}', [FilesController::class, 'logicDeleteFiles']);
 #endregion
 
 #region Аккаунты
