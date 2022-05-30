@@ -164,5 +164,57 @@ class DatabaseSeeder extends Seeder
             FOR EACH ROW
             EXECUTE FUNCTION public.history_notes();
         ');
+
+        DB::statement('
+            CREATE OR REPLACE FUNCTION public.history_files()
+            RETURNS trigger
+            LANGUAGE \'plpgsql\'
+            COST 100
+            VOLATILE NOT LEAKPROOF
+            AS $BODY$
+                    begin
+                        if(TG_OP = \'INSERT\') then
+                        INSERT INTO public.actions(
+                            action_date, user_id, type_action_id,data_id,type_table_id)
+                            VALUES (clock_timestamp(), NEW.user_id, 1,NEW.id,2);
+                            return NEW;
+                        end if;
+                        if(TG_OP = \'UPDATE\') then
+                            if(NEW.files_name != OLD.files_name OR NEW.path != OLD.path OR NEW.description != OLD.description)
+                            then 
+                                INSERT INTO public.actions(
+                                action_date, user_id, type_action_id,data_id,type_table_id)
+                                VALUES (clock_timestamp(), OLD.user_id, 4,OLD.id,2);
+                            return NEW;
+                            end if;
+                                
+                            if(NEW.logic_delete = false) 
+                            then 
+                                INSERT INTO public.actions(
+                                action_date, user_id, type_action_id,data_id,type_table_id)
+                                VALUES (clock_timestamp(), OLD.user_id, 3,OLD.id,2);
+                            end if;
+                            
+                            if(NEW.logic_delete = true) 
+                            then 
+                                INSERT INTO public.actions(
+                                action_date, user_id, type_action_id,data_id,type_table_id)
+                                VALUES (clock_timestamp(), OLD.user_id, 2,OLD.id,2);
+                            end if;
+                            
+                            RETURN NULL;
+                        end if;
+                        
+                    end;
+                    $BODY$;
+        ');
+
+        DB::statement('  
+            CREATE TRIGGER history_files
+            AFTER INSERT OR UPDATE 
+            ON public.files
+            FOR EACH ROW
+            EXECUTE FUNCTION public.history_files();
+        ');
     }
 }

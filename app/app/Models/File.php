@@ -11,6 +11,11 @@ class File extends Model
 
     protected $table = 'files';
 
+    protected $casts = [
+        'user_id' => 'integer',
+        'size' => 'integer',
+    ];
+
     protected $fillable = [
         'files_name',
         'path',

@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\FilesCreateRequest;
 use App\Http\Requests\FilesUpdateRequest;
+use App\Http\Resources\FileResource;
 use App\Http\Resources\IndexFilesResource;
 use App\Models\File;
 use App\Models\ShareData;
 use App\Models\ShareFile;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -42,7 +44,7 @@ class FilesController extends Controller
             'file_id' => $result->id,
             'share_id' => $shareData->id
         ]);
-        return response()->json($result, 200);
+        return response()->json(new FileResource($result), 200);
     }
 
     public function show($id)
@@ -63,14 +65,15 @@ class FilesController extends Controller
         if (!Storage::delete($result->path)) {
             return response()->json(['error' => ['file' => ["Ошибка"]]], 422);
         }
-        $path = $request->file->store($request->login);
+        $path = $request->file->store(User::find($result->user_id)->login);
         $result->update([
             'files_name' => $request->file_name,
             'path' => $path,
             'size' => $request->size,
             'description' => $request->description,
         ]);
-        return response()->json($result, 200);
+
+        return response()->json(new FileResource($result), 200);
     }
 
 

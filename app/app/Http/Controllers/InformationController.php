@@ -9,6 +9,7 @@ use App\Http\Resources\IndexHistoryActionResource;
 use App\Http\Resources\IndexUserShareResource;
 use App\Models\Action;
 use App\Models\ShareAccount;
+use App\Models\ShareFile;
 use App\Models\ShareNotes;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -91,6 +92,46 @@ class InformationController extends Controller
             );
         }
         if ($request->type_table_id == 1) {
+            $result = ShareFile::join('share_data', 'share_data.id', '=', 'share_files.share_id')
+                ->join('files', 'files.id', '=', 'share_files.file_id')
+                ->where('file_id', '=', $request->data_id)
+                ->first();
+            if ($result == null) return response()->json('Данных нет', 404);
+            return  response()->json(
+                [
+                    'user_id' => $result->user_id,
+                    'creator' => $result->user_id == $result->user_receiver_id,
+                    'information_text' => [
+                        [
+                            'title' => 'Имя владельца',
+                            'content' => $result->files->user->user_name,
+                        ],
+                        [
+                            'title' => 'Почта владельца',
+                            'content' => $result->files->user->login,
+                        ],
+                        [
+                            'title' => 'Тип файла',
+                            'content' => substr($result->files->path, strrpos($result->files->path, '.') - strlen($result->files->path) + 1)
+                        ],
+                        [
+                            'title' => 'Размер файла',
+                            'content' => "".strval(round($result->files->size / 1024, 2))." МБ"
+                        ],
+                        [
+                            'title' => 'Дата создания',
+                            'content' =>  Date::parse(
+                                $result->files->created_at
+                            )->format('j F Y'),
+                        ],
+                        [
+                            'title' => 'Дата изменения',
+                            'content' => Date::parse($result->files->created_at)->format('j F Y'),
+                        ],
+                    ]
+                ],
+                200
+            );
         }
         if ($request->type_table_id == 2) {
             $result = ShareAccount::join('share_data', 'share_data.id', '=', 'share_account.share_id')
