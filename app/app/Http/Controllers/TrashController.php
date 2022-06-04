@@ -44,6 +44,7 @@ class TrashController extends Controller
                         'share_data.user_receiver_id'
                     )
                     ->where('user_sender_id', '=', $id)
+                    ->where('user_receiver_id', '=', $id)
                     ->where(function ($query) {
                         $query->orwhere('notes.logic_delete', '=', 1)
                             ->orwhere('account.logic_delete', '=', 1)

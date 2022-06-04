@@ -40,6 +40,7 @@ Route::post('/confirmationNewLogin', [UserController::class, 'confirmationNewLog
 Route::post('/newUserName', [UserController::class, 'new_user_name']);
 Route::post('/newLogin', [UserController::class, 'new_login']);
 Route::post('/newPassword', [UserController::class, 'new_password']);
+Route::post('/userSearch', [UserController::class, 'user_search']);
 #endregion
 
 #region Заметка
@@ -68,10 +69,8 @@ Route::delete('/account/{id}', [AccountContoller::class, 'destroy']);
 #endregion
 
 #region Поделиться
-Route::post("/share/add/notes", [ShareController::class, 'shareAddNotes']);
-Route::post("/share/add/account", [ShareController::class, 'shareAddAccount']);
-Route::delete('/share/remove/notes', [ShareController::class, 'shareRemoveNotes']);
-Route::delete('/share/remove/account', [ShareController::class, 'shareRemoveAccount']);
+Route::post('/share/add/', [ShareController::class, 'shareAddData']);
+Route::delete('/share/remove', [ShareController::class, 'shareRemoveData']);
 #endregion
 
 #region корзина
@@ -110,7 +109,9 @@ Route::get('/data/{id}', function ($id) {
                     'share_data.user_sender_id',
                     'share_data.user_receiver_id'
                 )
-                ->where('user_sender_id', '=', $id)
+                ->where(function ($query) use ($id) {
+                    $query->orwhere('user_receiver_id', '=', $id);
+                })
                 ->where(function ($query) {
                     $query->orwhere('notes.logic_delete', '=', 0)
                         ->orwhere('account.logic_delete', '=', 0)

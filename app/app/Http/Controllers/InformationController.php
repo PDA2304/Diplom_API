@@ -40,7 +40,11 @@ class InformationController extends Controller
                 }
             case 1: {
                     //Файлы
-                    return response()->json();
+                    $result = IndexUserShareResource::collection(ShareFile::join('share_data', 'share_data.id', '=', 'share_files.share_id')
+                        ->where('user_receiver_id', '!=', $request->user_id)
+                        ->where('file_id', '=', $request->data_id)
+                        ->get());
+                    return response()->json($result, 200);
                 }
             case 2: {
                     //Аккаунты
@@ -116,7 +120,7 @@ class InformationController extends Controller
                         ],
                         [
                             'title' => 'Размер файла',
-                            'content' => "".strval(round($result->files->size / 1024, 2))." МБ"
+                            'content' => "" . strval(round($result->files->size / 1024 / 1024, 2)) . " МБ"
                         ],
                         [
                             'title' => 'Дата создания',
