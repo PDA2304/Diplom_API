@@ -60,3 +60,7 @@ docker_start_demon:
 # Собирает docker и запускает в фоновом режиме 
 docker_build_start_demon:
 	docker-compose up --build -d
+
+docker_chmod_start_demon:
+	sudo chmod 666 /var/run/docker.sock
+	docker-compose up --build -d	 

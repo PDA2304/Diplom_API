@@ -351,3 +351,270 @@
 2022/04/13 09:17:18 [notice] 1#1: start worker process 36
 2022/04/13 09:17:18 [notice] 1#1: start worker process 37
 2022/04/13 09:18:29 [warn] 31#31: *1 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/1/00/0000000001 while reading upstream, client: 192.168.157.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "192.168.157.128:8888"
+2022/05/31 08:20:41 [notice] 1#1: using the "epoll" event method
+2022/05/31 08:20:41 [notice] 1#1: nginx/1.21.6
+2022/05/31 08:20:41 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/05/31 08:20:41 [notice] 1#1: OS: Linux 5.4.0-42-generic
+2022/05/31 08:20:41 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/05/31 08:20:41 [notice] 1#1: start worker processes
+2022/05/31 08:20:41 [notice] 1#1: start worker process 29
+2022/05/31 08:20:41 [notice] 1#1: start worker process 30
+2022/05/31 08:26:41 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/public/index.php on line 34PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/public/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /var/www/public/index.php on line 34" while reading response header from upstream, client: 31.185.7.250, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "89.208.210.91:8888"
+2022/05/31 08:26:42 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/public/index.php on line 34PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/public/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /var/www/public/index.php on line 34" while reading response header from upstream, client: 31.185.7.250, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "89.208.210.91:8888"
+2022/05/31 08:26:44 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/public/index.php on line 34PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/public/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /var/www/public/index.php on line 34" while reading response header from upstream, client: 31.185.7.250, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "89.208.210.91:8888"
+2022/05/31 08:26:45 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/public/index.php on line 34PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/public/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /var/www/public/index.php on line 34" while reading response header from upstream, client: 31.185.7.250, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "89.208.210.91:8888"
+2022/05/31 08:26:46 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/public/index.php on line 34PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/public/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /var/www/public/index.php on line 34" while reading response header from upstream, client: 31.185.7.250, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "89.208.210.91:8888"
+2022/05/31 08:26:56 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/public/index.php on line 34PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/public/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /var/www/public/index.php on line 34" while reading response header from upstream, client: 31.185.7.250, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "89.208.210.91:8888"
+2022/05/31 08:26:57 [error] 30#30: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/public/index.php on line 34PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/public/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /var/www/public/index.php on line 34" while reading response header from upstream, client: 31.185.7.250, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "89.208.210.91:8888"
+2022/05/31 08:29:04 [error] 30#30: *15 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 90.151.171.106, server: , request: "GET http://host64.ru/rb/getip.php?Z73657586051Q1 HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "host64.ru", referrer: "https://google.com/"
+2022/05/31 08:32:17 [warn] 30#30: *23 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 31.185.7.250, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/05/31 08:34:07 [warn] 30#30: *31 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000002, client: 31.185.7.250, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/05/31 08:36:48 [warn] 30#30: *36 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000003, client: 31.185.7.250, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/05/31 08:37:53 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/05/31 08:37:53 [notice] 30#30: gracefully shutting down
+2022/05/31 08:37:53 [notice] 30#30: exiting
+2022/05/31 08:37:53 [notice] 30#30: exit
+2022/05/31 08:37:53 [notice] 29#29: gracefully shutting down
+2022/05/31 08:37:53 [notice] 29#29: exiting
+2022/05/31 08:37:53 [notice] 29#29: exit
+2022/05/31 08:37:53 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/05/31 08:37:53 [notice] 1#1: worker process 30 exited with code 0
+2022/05/31 08:37:53 [notice] 1#1: signal 29 (SIGIO) received
+2022/05/31 08:37:53 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2022/05/31 08:37:53 [notice] 1#1: worker process 29 exited with code 0
+2022/05/31 08:37:53 [notice] 1#1: exit
+2022/06/04 13:25:17 [notice] 1#1: using the "epoll" event method
+2022/06/04 13:25:17 [notice] 1#1: nginx/1.21.6
+2022/06/04 13:25:17 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/04 13:25:17 [notice] 1#1: OS: Linux 5.4.0-42-generic
+2022/06/04 13:25:17 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/04 13:25:17 [notice] 1#1: start worker processes
+2022/06/04 13:25:17 [notice] 1#1: start worker process 30
+2022/06/04 13:25:17 [notice] 1#1: start worker process 31
+2022/06/04 13:34:14 [warn] 30#30: *18 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 194.34.99.156, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 13:35:49 [warn] 30#30: *37 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000002, client: 109.252.187.120, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 13:39:30 [warn] 31#31: *96 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000003, client: 109.252.187.120, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 13:39:32 [warn] 31#31: *97 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000004, client: 109.252.187.120, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 13:39:32 [warn] 30#30: *98 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000005, client: 109.252.187.120, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 13:39:32 [warn] 30#30: *99 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000006, client: 109.252.187.120, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 13:39:35 [warn] 30#30: *101 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000007, client: 109.252.187.120, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 13:40:44 [warn] 30#30: *112 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000008, client: 109.252.187.120, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 15:15:11 [warn] 30#30: *244 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000009, client: 109.95.79.210, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 15:27:50 [warn] 30#30: *297 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000010, client: 109.95.79.210, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 16:21:17 [warn] 30#30: *486 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000011, client: 37.110.38.118, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 17:21:48 [warn] 31#31: *591 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000012, client: 79.139.179.187, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 17:25:01 [warn] 30#30: *647 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000013, client: 194.34.99.156, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 17:25:14 [warn] 30#30: *649 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000014, client: 194.34.99.156, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 17:45:00 [warn] 31#31: *704 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000015, client: 194.34.99.156, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/04 18:51:44 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/04 18:51:44 [notice] 30#30: gracefully shutting down
+2022/06/04 18:51:44 [notice] 30#30: exiting
+2022/06/04 18:51:44 [notice] 30#30: exit
+2022/06/04 18:51:44 [notice] 31#31: gracefully shutting down
+2022/06/04 18:51:44 [notice] 31#31: exiting
+2022/06/04 18:51:44 [notice] 31#31: exit
+2022/06/04 18:51:44 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/06/04 18:51:44 [notice] 1#1: worker process 30 exited with code 0
+2022/06/04 18:51:44 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/04 18:51:44 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/06/04 18:51:44 [notice] 1#1: worker process 31 exited with code 0
+2022/06/04 18:51:44 [notice] 1#1: exit
+2022/06/05 09:18:21 [notice] 1#1: using the "epoll" event method
+2022/06/05 09:18:21 [notice] 1#1: nginx/1.21.6
+2022/06/05 09:18:21 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/05 09:18:21 [notice] 1#1: OS: Linux 5.4.0-42-generic
+2022/06/05 09:18:21 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/05 09:18:21 [notice] 1#1: start worker processes
+2022/06/05 09:18:21 [notice] 1#1: start worker process 30
+2022/06/05 09:18:21 [notice] 1#1: start worker process 31
+2022/06/05 09:20:45 [warn] 30#30: *17 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/1/00/0000000001 while reading upstream, client: 46.138.147.189, server: , request: "POST /api/confirmation HTTP/1.1", upstream: "fastcgi://172.18.0.4:9000", host: "89.208.210.91:8888"
+2022/06/05 09:38:00 [warn] 31#31: *89 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000002, client: 46.138.147.189, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/05 09:38:35 [warn] 31#31: *92 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000003, client: 46.138.147.189, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/05 09:41:41 [warn] 30#30: *116 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000004, client: 194.34.99.156, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/05 09:41:53 [warn] 30#30: *121 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000005, client: 194.34.99.156, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/05 09:47:54 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/05 09:47:54 [notice] 30#30: gracefully shutting down
+2022/06/05 09:47:54 [notice] 31#31: gracefully shutting down
+2022/06/05 09:47:54 [notice] 30#30: exiting
+2022/06/05 09:47:54 [notice] 31#31: exiting
+2022/06/05 09:47:54 [notice] 31#31: exit
+2022/06/05 09:47:54 [notice] 30#30: exit
+2022/06/05 09:47:54 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/06/05 09:47:54 [notice] 1#1: worker process 30 exited with code 0
+2022/06/05 09:47:54 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/05 09:47:54 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/06/05 09:47:54 [notice] 1#1: worker process 31 exited with code 0
+2022/06/05 09:47:54 [notice] 1#1: exit
+2022/06/05 10:46:21 [notice] 1#1: using the "epoll" event method
+2022/06/05 10:46:21 [notice] 1#1: nginx/1.21.6
+2022/06/05 10:46:21 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/05 10:46:21 [notice] 1#1: OS: Linux 5.4.0-42-generic
+2022/06/05 10:46:21 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/05 10:46:21 [notice] 1#1: start worker processes
+2022/06/05 10:46:21 [notice] 1#1: start worker process 29
+2022/06/05 10:46:21 [notice] 1#1: start worker process 30
+2022/06/05 10:46:54 [warn] 30#30: *3 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 194.34.99.156, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/05 10:51:16 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/05 10:51:16 [notice] 30#30: gracefully shutting down
+2022/06/05 10:51:16 [notice] 30#30: exiting
+2022/06/05 10:51:16 [notice] 30#30: exit
+2022/06/05 10:51:16 [notice] 29#29: gracefully shutting down
+2022/06/05 10:51:16 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/06/05 10:51:16 [notice] 1#1: worker process 30 exited with code 0
+2022/06/05 10:51:16 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/05 13:46:10 [notice] 1#1: using the "epoll" event method
+2022/06/05 13:46:10 [notice] 1#1: nginx/1.21.6
+2022/06/05 13:46:10 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/05 13:46:10 [notice] 1#1: OS: Linux 5.4.0-42-generic
+2022/06/05 13:46:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/05 13:46:10 [notice] 1#1: start worker processes
+2022/06/05 13:46:10 [notice] 1#1: start worker process 30
+2022/06/05 13:46:10 [notice] 1#1: start worker process 31
+2022/06/05 13:47:53 [warn] 30#30: *3 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 194.34.99.156, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/05 14:37:58 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/05 14:37:59 [notice] 31#31: gracefully shutting down
+2022/06/05 14:37:59 [notice] 30#30: gracefully shutting down
+2022/06/05 14:37:59 [notice] 31#31: exiting
+2022/06/05 14:37:59 [notice] 30#30: exiting
+2022/06/05 14:37:59 [notice] 30#30: exit
+2022/06/05 14:37:59 [notice] 31#31: exit
+2022/06/05 14:37:59 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/06/05 14:37:59 [notice] 1#1: worker process 30 exited with code 0
+2022/06/05 14:37:59 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/05 14:37:59 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/06/05 14:37:59 [notice] 1#1: worker process 31 exited with code 0
+2022/06/05 14:37:59 [notice] 1#1: exit
+2022/06/06 08:06:16 [notice] 1#1: using the "epoll" event method
+2022/06/06 08:06:16 [notice] 1#1: nginx/1.21.6
+2022/06/06 08:06:16 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/06 08:06:16 [notice] 1#1: OS: Linux 5.4.0-42-generic
+2022/06/06 08:06:16 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/06 08:06:16 [notice] 1#1: start worker processes
+2022/06/06 08:06:16 [notice] 1#1: start worker process 30
+2022/06/06 08:06:16 [notice] 1#1: start worker process 31
+2022/06/06 08:23:27 [warn] 30#30: *38 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 217.173.77.182, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/06 08:25:18 [warn] 31#31: *60 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000002, client: 217.173.77.182, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/06 08:26:42 [warn] 31#31: *65 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000003, client: 217.173.77.182, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/06 08:28:55 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/06 08:28:55 [notice] 30#30: gracefully shutting down
+2022/06/06 08:28:55 [notice] 30#30: exiting
+2022/06/06 08:28:55 [notice] 30#30: exit
+2022/06/06 08:28:55 [notice] 31#31: gracefully shutting down
+2022/06/06 08:28:55 [notice] 31#31: exiting
+2022/06/06 08:28:55 [notice] 31#31: exit
+2022/06/06 08:28:55 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/06/06 08:28:55 [notice] 1#1: worker process 30 exited with code 0
+2022/06/06 08:28:55 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/06 08:28:55 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/06/06 08:28:55 [notice] 1#1: worker process 31 exited with code 0
+2022/06/06 08:28:55 [notice] 1#1: exit
+2022/06/06 09:29:46 [notice] 1#1: using the "epoll" event method
+2022/06/06 09:29:46 [notice] 1#1: nginx/1.21.6
+2022/06/06 09:29:46 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/06 09:29:46 [notice] 1#1: OS: Linux 5.4.0-42-generic
+2022/06/06 09:29:46 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/06 09:29:46 [notice] 1#1: start worker processes
+2022/06/06 09:29:46 [notice] 1#1: start worker process 30
+2022/06/06 09:29:46 [notice] 1#1: start worker process 31
+2022/06/06 09:42:50 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/06 09:42:50 [notice] 31#31: gracefully shutting down
+2022/06/06 09:42:50 [notice] 31#31: exiting
+2022/06/06 09:42:50 [notice] 31#31: exit
+2022/06/06 09:42:50 [notice] 30#30: gracefully shutting down
+2022/06/06 09:42:50 [notice] 30#30: exiting
+2022/06/06 09:42:50 [notice] 30#30: exit
+2022/06/06 09:42:50 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/06/06 09:42:50 [notice] 1#1: worker process 31 exited with code 0
+2022/06/06 09:42:50 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/06 09:42:50 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/06/06 09:42:50 [notice] 1#1: worker process 30 exited with code 0
+2022/06/06 09:42:50 [notice] 1#1: exit
+2022/06/06 19:44:53 [notice] 1#1: using the "epoll" event method
+2022/06/06 19:44:53 [notice] 1#1: nginx/1.21.6
+2022/06/06 19:44:53 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/06 19:44:53 [notice] 1#1: OS: Linux 5.4.0-42-generic
+2022/06/06 19:44:53 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/06 19:44:53 [notice] 1#1: start worker processes
+2022/06/06 19:44:53 [notice] 1#1: start worker process 29
+2022/06/06 19:44:53 [notice] 1#1: start worker process 30
+2022/06/06 19:53:29 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/06 19:53:29 [notice] 29#29: gracefully shutting down
+2022/06/06 19:53:29 [notice] 29#29: exiting
+2022/06/06 19:53:29 [notice] 29#29: exit
+2022/06/06 19:53:29 [notice] 30#30: gracefully shutting down
+2022/06/06 19:53:29 [notice] 30#30: exiting
+2022/06/06 19:53:29 [notice] 30#30: exit
+2022/06/06 19:53:29 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2022/06/06 19:53:29 [notice] 1#1: worker process 29 exited with code 0
+2022/06/06 19:53:29 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/06 19:53:29 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/06/06 19:53:29 [notice] 1#1: worker process 30 exited with code 0
+2022/06/06 19:53:29 [notice] 1#1: exit
+2022/06/07 08:11:56 [notice] 1#1: using the "epoll" event method
+2022/06/07 08:11:56 [notice] 1#1: nginx/1.21.6
+2022/06/07 08:11:56 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/07 08:11:56 [notice] 1#1: OS: Linux 5.4.0-42-generic
+2022/06/07 08:11:56 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/07 08:11:56 [notice] 1#1: start worker processes
+2022/06/07 08:11:56 [notice] 1#1: start worker process 29
+2022/06/07 08:11:56 [notice] 1#1: start worker process 30
+2022/06/07 08:15:02 [warn] 29#29: *11 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 176.59.174.139, server: , request: "POST /api/files HTTP/1.1", host: "89.208.210.91:8888"
+2022/06/07 09:14:11 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/07 09:14:11 [notice] 30#30: gracefully shutting down
+2022/06/07 09:14:11 [notice] 30#30: exiting
+2022/06/07 09:14:11 [notice] 30#30: exit
+2022/06/07 09:14:11 [notice] 29#29: gracefully shutting down
+2022/06/07 09:14:11 [notice] 29#29: exiting
+2022/06/07 09:14:11 [notice] 29#29: exit
+2022/06/07 09:14:11 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/06/07 09:14:11 [notice] 1#1: worker process 30 exited with code 0
+2022/06/07 09:14:11 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/07 09:14:11 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2022/06/07 09:14:11 [notice] 1#1: worker process 29 exited with code 0
+2022/06/07 09:14:11 [notice] 1#1: exit
+2022/06/07 13:17:43 [notice] 1#1: using the "epoll" event method
+2022/06/07 13:17:43 [notice] 1#1: nginx/1.21.6
+2022/06/07 13:17:43 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/07 13:17:43 [notice] 1#1: OS: Linux 5.4.0-42-generic
+2022/06/07 13:17:43 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/07 13:17:43 [notice] 1#1: start worker processes
+2022/06/07 13:17:43 [notice] 1#1: start worker process 30
+2022/06/07 13:17:43 [notice] 1#1: start worker process 31
+2022/06/08 04:18:52 [error] 30#30: *33 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 90.151.171.106, server: , request: "GET http://check.best-proxies.ru/ip.php?Z73657586051Q1 HTTP/1.1", upstream: "fastcgi://172.18.0.4:9000", host: "check.best-proxies.ru", referrer: "https://google.com/"
+2022/06/10 08:34:46 [warn] 30#30: *96 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/1/00/0000000001 while reading upstream, client: 23.227.202.242, server: , request: "POST / HTTP/1.1", upstream: "fastcgi://172.18.0.4:9000", host: "89.208.210.91:8888"
+2022/06/10 10:26:24 [error] 31#31: *109 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 85.119.151.250, server: , request: "GET http://check.best-proxies.ru/ip.php?Z73657586051Q1 HTTP/1.1", upstream: "fastcgi://172.18.0.4:9000", host: "check.best-proxies.ru", referrer: "https://google.com/"
+2022/06/12 03:40:51 [error] 30#30: *222 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 104.244.77.122, server: , request: "GET /php.php HTTP/1.1", upstream: "fastcgi://172.18.0.4:9000", host: "89.208.210.91:8888"
+2022/06/12 03:40:51 [error] 31#31: *219 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 104.244.77.122, server: , request: "GET /info.php HTTP/1.1", upstream: "fastcgi://172.18.0.4:9000", host: "89.208.210.91:8888"
+2022/06/12 03:40:51 [error] 31#31: *221 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 104.244.77.122, server: , request: "GET /phpinfo.php HTTP/1.1", upstream: "fastcgi://172.18.0.4:9000", host: "89.208.210.91:8888"
+2022/06/12 10:09:37 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/12 10:09:38 [notice] 31#31: gracefully shutting down
+2022/06/12 10:09:38 [notice] 30#30: gracefully shutting down
+2022/06/12 10:09:38 [notice] 31#31: exiting
+2022/06/12 10:09:38 [notice] 30#30: exiting
+2022/06/12 10:09:38 [notice] 31#31: exit
+2022/06/12 10:09:38 [notice] 30#30: exit
+2022/06/12 10:09:38 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/06/12 10:09:38 [notice] 1#1: worker process 30 exited with code 0
+2022/06/12 10:09:38 [notice] 1#1: worker process 31 exited with code 0
+2022/06/12 10:09:38 [notice] 1#1: exit
